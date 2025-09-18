@@ -88,7 +88,7 @@
   section { padding: 80px 50px; position: relative; }
 
   #sobre-nosotros {
-    background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('header.png') no-repeat center center/cover;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('header_1.png') no-repeat center center/cover;
     height: 1000px; display:flex; align-items:center; justify-content:center; text-align:center;
     color:white; border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,0.3);
   }
@@ -256,6 +256,79 @@
     nav.mobile { display: none !important; }
   }
   @media (max-width: 600px) { .description { font-size: 0.95em; line-height: 1.6; } }
+
+/* ===== FORMULARIO ===== */
+#contact-form {
+  background: linear-gradient(135deg,#f0f4f8,#d9e2ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+#contact-form .form-styled {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#contact-form .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#contact-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1em;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37,117,252,0.3);
+  outline: none;
+}
+
+#contact-form button {
+  background: linear-gradient(45deg,#6a11cb,#2575fc);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  background: linear-gradient(45deg,#2575fc,#6a11cb);
+}
+
+#contact-form textarea {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1em;
+  resize: vertical;
+  min-height: 120px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form textarea:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37,117,252,0.3);
+  outline: none;
+}
+
+
 </style>
 </head>
 <body>
@@ -289,7 +362,7 @@
   <div class="descripcion-container">
     <h2>Who We Are</h2>
     <p>LDT Foam Insulation is a trusted business dedicated to providing top-quality foam insulation solutions designed to make your home more comfortable, energy-efficient, and valuable. We know that your home is more than just a space—it’s where your family creates memories, relaxes, and feels safe. That’s why we approach every project with care, professionalism, and attention to detail, ensuring that our insulation solutions are tailored to meet the unique needs of your home.</p>
-    <p>Our advanced foam insulation helps regulate indoor temperatures, reduces energy consumption, lowers utility bills, and improves overall air quality. By creating a more efficient and healthy environment, we help homeowners enjoy a cozy, quieter, and more sustainable living space.</p>
+    <p>Our advanced foam insulation helps regulate indoor temperatures, reduces energy consumption, lowers utility bills, and "contributes to improve overall air quality. By creating a more efficient and healthy environment, we help homeowners enjoy a cozy, quieter, and more sustainable living space.</p>
     <p>At LDT Foam Insulation, we combine technical expertise with a customer-first approach. From the initial consultation to the final installation, our team is committed to guiding you through every step, answering all your questions, and ensuring that the results exceed your expectations. Choosing our services means investing in the long-term comfort, protection, and value of your home—while giving you peace of mind knowing that the work is done right the first time.</p>
     <p>Let us help you transform your home into a more energy-efficient, comfortable, and inviting space. With LDT Foam Insulation, excellence isn’t just a promise—it’s the standard we deliver on every project.</p>
   </div>
@@ -297,7 +370,7 @@
 
 <section id="servicios">
   <h2>Our Services</h2>
-  <p>Top-Quality Foam Insulation Services to Make Your Home More Comfortable, Energy-Efficient, and Protected All Year Round</p>
+  <p>Top-Quality Foam Insulation Services to Make Your Home More Comfortable, Energy-Efficient, and Protected Permanently</p>
   <div class="carousel" aria-label="Carrusel de servicios">
     <div class="slide active">
       <img src="open_cell.jpg" alt="Servicio 1">
@@ -323,14 +396,46 @@
 <!-- CONTACTO -->
 <section id="contacto">
   <div class="contact-container">
-    <h2>We are pleased to offer support in Spanish as well.</h2>
+    <h2>¡Hablamos Español!</h2>
     <p class="city-info">We proudly serve the city of <strong>San Antonio, Texas</strong> and surrounding areas.</p>
     <a href="https://wa.me/12105270746" target="_blank">
       <img src="WhatsApp.png" alt="WhatsApp">
       Contact Us on WhatsApp
     </a>
+    <br>
+    <br>
+    <p class="city-info">GET YOUR FREE ESTIMATE</p>
+    <p class="city-info">+1 (210) 527-0746</p>
   </div>
 </section>
+
+
+<!-- FORMULARIO -->
+<section id="contact-form">
+  <div class="contact-container">
+    <h2>Let’s Talk About Your Project</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST" class="form-styled">
+      <div class="form-group">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="lastName" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="address" placeholder="Address" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+      </div>
+      <div class="form-group">
+        <textarea name="jobDetails" placeholder="Job Description / Details" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
 
 <footer>
   <div class="footer-logos">
